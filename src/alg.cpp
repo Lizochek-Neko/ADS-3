@@ -3,6 +3,11 @@
 int cbinsearch(int* arr, int size, int value) {
     int i = 0, j = size - 1;
     while (i <= j) {
+        if (i == j) {
+            if (arr[i] != value) {
+                return 0;
+            }
+        }
         int mid = i + (j - i) / 2;
         if (arr[mid] == value) {
             int count = 0;
